@@ -1,0 +1,182 @@
+---
+import SectionTitle from "../components/SectionTitle.astro";
+import MainButton from "../components/MainButton.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+	<!-- Header -->
+    	<slot />
+    <!-- Footer -->
+  </body>
+</html>
+<style lang="less" is:global>
+  html {
+    background: #1c1b1f;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* 
+	@media (min-width: 1921px) and (max-height: 600px) {
+		font-size: 55.5%;
+	}
+	*/
+  }
+
+  body {
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: none;
+  }
+
+  /* fonts */
+  @font-face {
+    font-family: "SpaceGrotesk-Bold";
+    src: url("/fonts/SpaceGrotesk-Bold") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Regular";
+    src: url("/fonts/SpaceGrotesk-Regular") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .font-bold {
+    font-family: "SpaceGrotesk-Bold", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  .font-spacing {
+    font-family: "SpaceGrotesk-Bold", sans-serif;
+    color: white;
+    letter-spacing: 3px;
+  }
+
+  .font-regular {
+    font-family: "SpaceGrotesk-Regular", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  /* end fonts */
+
+  /* Utility */
+  .section-container {
+    max-width:  ~"calc(100vw - 20%)";
+    margin: 0 auto;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .center-float {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .basic-bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .center {
+    align-items: center;
+  }
+  .fw-b {
+    font-weight: 600;
+  }
+  .fw-l {
+    font-weight: 500;
+  }
+  .f-80 {
+    font-size: 8rem;
+  }
+  .f-70 {
+    font-size: 7rem;
+  }
+  .f-60 {
+    font-size: 6rem;
+  }
+  .f-50 {
+    font-size: 5rem;
+  }
+  .f-40 {
+    font-size: 4rem;
+  }
+  .f-30 {
+    font-size: 3rem;
+  }
+  .f-20 {
+    font-size: 2rem;
+  }
+  .f-18 {
+    font-size: 1.8rem;
+  }
+  .m-r {
+    margin-right: 1rem;
+  }
+  .m-l {
+    margin-left: 1rem;
+  }
+  /* End Utility */
+
+  /* Functions */
+  @desktopS: ~"(max-width: 1441px)";
+  @desktop: ~"(min-width: 1680px)";
+  @mobile: ~"(max-width: 551px)";
+  @tabletV: ~"(max-width: 850px)";
+  @tabletH: ~"(max-width: 1100px)";
+
+  @transition1: all 1s ease-in-out;
+
+  @white: #ffffff;
+  @purple: #281840;
+  @purple2: #ae2ff6;
+  @red: #e23b3b;
+  
+  .purple {
+    background-color: @purple;
+  }
+
+  @gradient1: linear-gradient(87deg, #6668eb 4.11%, #e23b3b 95.91%);
+  /* End Functions */
+
+  .font-gradient {
+    background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 36.77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

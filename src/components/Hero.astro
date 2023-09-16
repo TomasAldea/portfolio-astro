@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import mainPhoto from "../images/main-photo.png";
+import shapeRight from "../images/Shape1.svg";
+import shapeLeft from "../images/Shape2.svg";
+import MainButton from "./MainButton.astro";
+
+/* interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props; */
+---
+
+<div id="hero" class="basic-bg section-container">
+  <Image class="shape-left" src={shapeLeft} alt="Main photo portfolio" />
+  <Image class="shape-right" src={shapeRight} alt="Main photo portfolio" />
+  <div class="hero-till basic-bg"></div>
+  <div class="row">
+    <div class="text-container col">
+      <h1 class="font-bold f-80">
+        Welcome to my <br /><span class="font-gradient">Portfolio</span><br />
+         My name is <span class="font-gradient">Tomás</span>
+      </h1>
+      <MainButton title="Download cv" href="dw" />
+    </div>
+    <Image src={mainPhoto} alt="Main photo portfolio" width="600" />
+  </div>
+</div>
+<style lang="less">
+  #hero {
+    width: 100%;
+    height: 100vh;
+    .shape-right {
+      position: absolute;
+      right: 0;
+      top: 32rem;
+      z-index: -9;
+
+    }
+    .shape-left {
+        position: absolute;
+      left: 0;
+      top: -32rem;
+      z-index: -9;
+    }
+    .hero-till {
+      background-image: url("public/images/tillhome.svg");
+      width: 100vw;
+      height: 100%;
+      z-index: -9;
+      position: absolute;
+      left: 0;
+    }
+    .row {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>
