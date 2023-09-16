@@ -44,6 +44,7 @@ const { href, title, body } = Astro.props; */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      z-index: -1;
     }
     &:before {
       content: "";
@@ -56,25 +57,26 @@ const { href, title, body } = Astro.props; */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      z-index: -1;
     }
     .shape-right {
       position: absolute;
       right: 0;
       top: 32rem;
-      z-index: -9;
+      z-index: -1;
       width: 32vw;
     }
     .shape-left {
       position: absolute;
       left: 0;
       top: -32rem;
-      z-index: -9;
+      z-index: -1;
       width: 47vw;
     }
     .row {
       height: 100%;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       .main-photo {
         width: 45%;
         height: auto;

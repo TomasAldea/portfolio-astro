@@ -8,9 +8,55 @@
 const { href, title, body } = Astro.props; */
 ---
 
-<div class="header">
-    
+<div id="header">
+  <div class="section-container row font-regular">
+    <div class="logo f-40">TA</div>
+    <div class="navbar row">
+      <span class="navbar-item f-30">Home</span>
+      <span class="navbar-item f-30">Experiencia</span>
+      <span class="navbar-item f-30">Skills</span>
+      <span class="navbar-item f-30">Proyectos</span>
+      <span class="navbar-item f-30">Sobre mi</span>
+      <span class="navbar-item f-30">Contacto</span>
+    </div>
+    <div class="lang f-30">EN</div>
+  </div>
 </div>
 <style lang="less">
-
+  #header {
+    position: fixed;
+    width: 100%;
+    height: 10rem;
+    z-index: 1;
+    backdrop-filter: blur(14px);
+    background-color: transparent;
+    .section-container {
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+      .navbar {
+        .navbar-item {
+          cursor: pointer;
+          &:not(:last-child) {
+            margin-right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  /* @keyframes sticky {
+      from {
+        background-color: transparent;
+      }
+      to {
+        background-color: black;
+      }
+    }
+  
+  #experiencie {
+	view-timeline-name: --sticky;
+	view-timeline-axis: block;
+	animation-timeline: --sticky;
+	animation-name: sticky;
+  } */
 </style>
