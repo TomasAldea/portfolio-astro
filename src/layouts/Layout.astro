@@ -20,8 +20,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-	<!-- Header -->
-    	<slot />
+    <!-- Header -->
+    <slot />
     <!-- Footer -->
   </body>
 </html>
@@ -35,6 +35,10 @@ const { title } = Astro.props;
 		font-size: 55.5%;
 	}
 	*/
+
+    @media @tabletV {
+      font-size: 35.5%;
+    }
   }
 
   body {
@@ -89,8 +93,11 @@ const { title } = Astro.props;
 
   /* Utility */
   .section-container {
-    max-width:  ~"calc(100vw - 20%)";
+    max-width: ~"calc(100vw - 20%)";
     margin: 0 auto;
+    @media @tabletV {
+      max-width: ~"calc(100vw - 15%)";
+    }
   }
 
   .col {
@@ -123,6 +130,9 @@ const { title } = Astro.props;
   }
   .f-80 {
     font-size: 8rem;
+    @media @mobile {
+      font-size:5rem;
+    }
   }
   .f-70 {
     font-size: 7rem;
@@ -166,7 +176,7 @@ const { title } = Astro.props;
   @purple: #281840;
   @purple2: #ae2ff6;
   @red: #e23b3b;
-  
+
   .purple {
     background-color: @purple;
   }
