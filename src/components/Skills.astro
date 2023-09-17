@@ -1,13 +1,225 @@
 ---
-
+import { Image } from "astro:assets";
+import SectionTitle from "./SectionTitle.astro";
+import iconReact from "../images/react.svg";
+import iconGithub from "../images/github.svg";
+import iconFigma from "../images/figma.svg";
+import iconLarabel from "../images/larabel.svg";
+import iconPhp from "../images/php.svg";
+import iconNode from "../images/node.svg";
+import iconAstro from "../images/astro.svg";
+import iconJquery from "../images/jquery.svg";
+import iconCss from "../images/css.svg";
+import iconHtml from "../images/html.svg";
+import iconMysql from "../images/mysql.svg";
+import iconMongo from "../images/mongo.svg";
+import skillsShape from "../images/skills-shape.svg";
 ---
 
 <div id="skills">
-
+  <div class="section-container">
+    <Image src={skillsShape} class="shape" alt="react icon" />
+    <SectionTitle title="Skills" position="start" />
+    <div class="bar-container row">
+      <div class="skills red row">
+        <div class="skill-element col" style="height: 35rem;">
+          <Image src={iconReact} alt="react icon" />
+          <span class="title f-18 font-regular">react</span>
+        </div>
+        <div class="skill-element col" style="height: 40rem;">
+          <Image src={iconHtml} alt="html icon" />
+          <span class="title f-18 font-regular">html</span>
+        </div>
+        <div class="skill-element col" style="height: 38rem;">
+          <Image src={iconCss} alt="css icon" />
+          <span class="title f-18 font-regular">css</span>
+        </div>
+        <div class="skill-element col" style="height: 40rem;">
+          <Image src={iconJquery} alt="jquery icon" />
+          <span class="title f-18 font-regular">jquery</span>
+        </div>
+        <div class="skill-element col" style="height: 25rem;">
+          <Image src={iconAstro} alt="astro icon" />
+          <span class="title f-18 font-regular">astro</span>
+        </div>
+        <div class="group"></div>
+        <span class="f-20 font-light tec">Front-end</span>
+      </div>
+      <div class="skills pink row">
+        <div class="skill-element col" style="height: 35rem;">
+          <Image src={iconNode} alt="node icon" />
+          <span class="title f-18 font-regular">node</span>
+        </div>
+        <div class="skill-element col" style="height: 40rem;">
+          <Image src={iconLarabel} alt="larabel icon" />
+          <span class="title f-18 font-regular">larabel</span>
+        </div>
+        <div class="skill-element col" style="height: 35rem;">
+          <Image src={iconMongo} alt="mongodb icon" />
+          <span class="title f-18 font-regular">mongodb</span>
+        </div>
+        <div class="skill-element col" style="height: 40rem;">
+          <Image src={iconMysql} alt="mysql icon" />
+          <span class="title f-18 font-regular">mysql</span>
+        </div>
+        <div class="group"></div>
+        <span class="f-20 font-light tec">Back-end</span>
+      </div>
+      <div class="skills purpl row">
+        <div class="skill-element col" style="height: 35rem;">
+          <Image src={iconGithub} alt="git icon" />
+          <span class="title f-18 font-regular">git</span>
+        </div>
+        <div class="skill-element col" style="height: 15rem;">
+          <Image src={iconFigma} alt="figma icon" />
+          <span class="title f-18 font-regular">figma</span>
+        </div>
+        <div class="group"></div>
+        <span class="f-20 font-light tec">Otros</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style lang="less">
-    #skills {
-        height: 50rem;
+  #skills {
+    padding: 2rem 0 35rem 0;
+    .section-container {
+      position: relative;
+
+      .shape {
+        width: 60vw;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        background: linear-gradient(270deg, #ae2ff6 0%, #e23b3b 99.41%);
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+      }
+
+      .bar-container {
+        padding: 12rem 6rem 0 6rem;
+        justify-content: space-around;
+
+        .skills {
+          position: relative;
+          width: fit-content;
+          text-align: center;
+
+          &:nth-child(2) {
+            margin: 0 5rem;
+          }
+
+          &.red {
+            .skill-element {
+              background: rgba(226, 59, 59, 0.67);
+            }
+
+            .group {
+              border: 1px solid rgba(226, 59, 59, 0.67);
+            }
+          }
+
+          &.pink {
+            .skill-element {
+              background: rgba(199, 53, 158, 0.67);
+            }
+
+            .group {
+              border: 1px solid rgba(199, 53, 158, 0.67);
+            }
+          }
+
+          &.purpl {
+            .skill-element {
+              background: rgba(181, 49, 222, 0.67);
+            }
+
+            .group {
+              border: 1px solid rgba(181, 49, 222, 0.67);
+            }
+          }
+
+          .skill-element {
+            align-items: center;
+            margin-top: auto;
+            position: relative;
+            width: 1.9rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            margin: auto 2.5rem 0 2.5rem;
+
+            img {
+              position: absolute;
+              top: -6rem;
+              width: 4.5rem;
+              height: 4.5rem;
+            }
+
+            .title {
+              position: absolute;
+              bottom: -15rem;
+              writing-mode: vertical-lr;
+              text-orientation: upright;
+              /* letter-spacing: -4px; */
+              text-transform: uppercase;
+              height: 14rem;
+              text-align: start;
+            }
+          }
+
+          .group {
+            position: absolute;
+            bottom: -19rem;
+            left: 50%;
+            border-top: none !important;
+            padding: 2rem 0rem 2rem 0rem;
+            width: 100%;
+            position: absolute;
+            transform: translateX(-50%);
+          }
+
+          .tec {
+            position: absolute;
+            bottom: -23rem;
+            left: 50%;
+            width: 100%;
+            position: absolute;
+            transform: translateX(-50%);
+          }
+        }
+      }
     }
+    @media (max-width: 1054px) {
+      .section-container {
+        .bar-container {
+          .skills {
+            &:nth-child(2) {
+              margin: 0 3rem;
+            }
+            .skill-element {
+              margin: auto 1.4rem 0 1.4rem;
+              width: 1.5rem;
+              .title {
+                font-size: 1.5rem;
+              }
+              img {
+                width: 3.5rem;
+                height: 3.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 </style>

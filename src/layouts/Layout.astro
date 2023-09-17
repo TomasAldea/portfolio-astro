@@ -80,6 +80,20 @@ const { title } = Astro.props;
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "SpaceGrotesk-Light";
+    src: url("../fonts/SpaceGrotesk-Light.woff") format("woff2");
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .font-light {
+    font-family: "SpaceGrotesk-Light", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+  }
+
   .font-bold {
     font-family: "SpaceGrotesk-Bold", sans-serif;
     color: white;
