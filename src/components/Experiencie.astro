@@ -130,6 +130,12 @@ const { href, title, body } = Astro.props; */
     background-image: url("../images/rectangle.svg");
     .section-container {
       padding: 2rem 0 9rem 0;
+      view-timeline-name: --aos;
+      view-timeline-axis: block;
+      animation-timeline: --aos;
+      animation-name: aos;
+      animation-range: entry 0% cover 50%;
+      animation-fill-mode: both;
       .header {
         align-items: center;
         justify-content: space-around;
@@ -205,52 +211,44 @@ const { href, title, body } = Astro.props; */
       }
     }
     @media (max-width: 850px) {
-        .section-container {
-
-        }
+      .section-container {
+      }
     }
     @media (max-width: 551px) {
-        .section-container {
-         .header {
-            flex-direction: column;
-            .name {
-                .row {
-                    img {
-                        width: 3rem;
-                        margin-right: .8rem;
-                    }
-                }
+      .section-container {
+        animation-name: none;
+        .header {
+          flex-direction: column;
+          .name {
+            .row {
+              img {
+                width: 3rem;
+                margin-right: 0.8rem;
+              }
             }
-            .line {
-                margin-bottom: 1rem;
-            }
-         }   
-         .job-desc-cont {
-            width: 68vw;
-            padding: 4rem 8px 4rem 9rem;
-            .jobs {
-                &::before {
-                    left: -30px;
-                }
-                .job {
-                    .font-spacing {
-                        &::before {
-                            left: -36px;
-                            top: 4px;
-                        }
-                    }
-                }
-            }
-         }
+          }
+          .line {
+            margin-bottom: 1rem;
+          }
         }
+        .job-desc-cont {
+          width: 68vw;
+          padding: 4rem 8px 4rem 9rem;
+          .jobs {
+            &::before {
+              left: -30px;
+            }
+            .job {
+              .font-spacing {
+                &::before {
+                  left: -36px;
+                  top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-  }
-  .section-container {
-    view-timeline-name: --aos;
-    view-timeline-axis: block;
-    animation-timeline: --aos;
-    animation-name: aos;
-    animation-range: entry 0% cover 50%;
-    animation-fill-mode: both;
   }
 </style>

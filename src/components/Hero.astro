@@ -84,6 +84,14 @@ const { href, title, body } = Astro.props; */
         min-width: 30rem;
       }
     }
+    .section-container {
+    view-timeline-name: --aos2;
+    view-timeline-axis: block;
+    animation-timeline: --aos2;
+    animation-name: aos2;
+    animation-range: entry 100% cover 90%;
+    animation-fill-mode: forwards;
+    }
     @media (max-width: 850px) {
       height: 72vh;
       .row {
@@ -109,6 +117,9 @@ const { href, title, body } = Astro.props; */
         .text-container {
         }
       }
+      .section-container {
+        animation-name: none;
+      }
     }
   }
   @keyframes aos2 {
@@ -120,13 +131,5 @@ const { href, title, body } = Astro.props; */
       scale: 80%;
       transform: translateY(-30%);
     }
-  }
-  .section-container {
-    view-timeline-name: --aos2;
-    view-timeline-axis: block;
-    animation-timeline: --aos2;
-    animation-name: aos2;
-    animation-range: entry 100% cover 90%;
-    animation-fill-mode: forwards;
   }
 </style>
