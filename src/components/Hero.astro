@@ -96,6 +96,7 @@ const { href, title, body } = Astro.props; */
       }
     }
     @media (max-width: 551px) {
+      height: 60vh;
       .shape-left {
         width: 80vw;
       }
@@ -109,5 +110,23 @@ const { href, title, body } = Astro.props; */
         }
       }
     }
+  }
+  @keyframes aos2 {
+    from {
+      scale: 100%;
+      transform: translateY(0%);
+    }
+    to {
+      scale: 80%;
+      transform: translateY(-30%);
+    }
+  }
+  .section-container {
+    view-timeline-name: --aos2;
+    view-timeline-axis: block;
+    animation-timeline: --aos2;
+    animation-name: aos2;
+    animation-range: entry 100% cover 90%;
+    animation-fill-mode: forwards;
   }
 </style>

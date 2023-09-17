@@ -214,8 +214,19 @@ const { title } = Astro.props;
   /* End Functions */
 
   .font-gradient {
-    background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 36.77%);
+    background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 75.77%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes aos {
+    from {
+      scale: 80%;
+      transform: translateY(35%);
+    }
+    to {
+      scale: 100%;
+      transform: translateY(0%);
+    }
   }
 </style>

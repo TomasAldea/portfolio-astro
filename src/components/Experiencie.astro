@@ -236,6 +236,7 @@ const { href, title, body } = Astro.props; */
                     .font-spacing {
                         &::before {
                             left: -36px;
+                            top: 4px;
                         }
                     }
                 }
@@ -243,5 +244,13 @@ const { href, title, body } = Astro.props; */
          }
         }
     }
+  }
+  .section-container {
+    view-timeline-name: --aos;
+    view-timeline-axis: block;
+    animation-timeline: --aos;
+    animation-name: aos;
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: both;
   }
 </style>
