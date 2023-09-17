@@ -1,25 +1,34 @@
 ---
 interface Props {
   title: string;
+  position: string;
 }
 
-const { title } = Astro.props;
+const { title, position } = Astro.props;
 ---
 
-<h1 class="font-bold f-40 row center">
+<h2 class={`font-bold f-40 row center ${position}`}>
   <span class="f-80 m-r spanr-font-gradient">&lt;</span>{title}<span
     class="f-80 m-l spanl-font-gradient">/&gt;</span
   >
-</h1>
+</h2>
 <style lang="less">
-  .spanl-font-gradient {
-    background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 67.77%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .spanr-font-gradient {
-    background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 86.77%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .font-bold {
+    &.end {
+      justify-content: end;
+    }
+    &.start {
+      justify-content: start;
+    }
+    .spanl-font-gradient {
+      background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 67.77%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .spanr-font-gradient {
+      background: -webkit-linear-gradient(left, #6668eb 3.58%, #e23b3b 86.77%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 </style>

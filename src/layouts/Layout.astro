@@ -29,7 +29,9 @@ const { title } = Astro.props;
     background: #1c1b1f;
     font-size: 62.5%;
     overflow-x: hidden;
-    
+    &.overflowHide {
+      overflow: hidden;
+    }
 	@media (max-height: 600px) {
 		font-size: 35.5%;
 	}
@@ -56,7 +58,7 @@ const { title } = Astro.props;
   /* fonts */
   @font-face {
     font-family: "SpaceGrotesk-Bold";
-    src: url("/fonts/SpaceGrotesk-Bold") format("ttf");
+    src: url("/fonts/SpaceGrotesk-Bold.woff") format("woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -64,7 +66,15 @@ const { title } = Astro.props;
 
   @font-face {
     font-family: "SpaceGrotesk-Regular";
-    src: url("/fonts/SpaceGrotesk-Regular") format("ttf");
+    src: url("/fonts/SpaceGrotesk-Regular.woff") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Medium";
+    src: url("/fonts/SpaceGrotesk-Medium.woff") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -77,13 +87,19 @@ const { title } = Astro.props;
   }
 
   .font-spacing {
-    font-family: "SpaceGrotesk-Bold", sans-serif;
+    font-family: "SpaceGrotesk-Regular", sans-serif;
     color: white;
     letter-spacing: 3px;
   }
 
   .font-regular {
     font-family: "SpaceGrotesk-Regular", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  .font-medium {
+    font-family: "SpaceGrotesk-Medium", sans-serif;
     color: white;
     letter-spacing: 1px;
   }

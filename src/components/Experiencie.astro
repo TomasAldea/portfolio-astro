@@ -1,4 +1,8 @@
 ---
+import SectionTitle from "./SectionTitle.astro";
+import locationIcon from "../images/location-icon.svg";
+import { Image } from "astro:assets";
+
 /* interface Props {
 	title: string;
 	body: string;
@@ -9,11 +13,235 @@ const { href, title, body } = Astro.props; */
 ---
 
 <div id="experiencie" class="purple">
-
+  <div class="section-container">
+    <SectionTitle title="Experiencia" position="end" />
+    <!-- work1 -->
+    <div class="header row font-spacing">
+      <div class="name col">
+        <div class="f-30">Full Stack web developer</div>
+        <div class="row">
+          <Image src={locationIcon} alt="location icon" />
+          <span class="f-30">Dabasystem, Barcelona</span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="date f-30">2021 - Presente</div>
+    </div>
+    <div class="job-desc-cont">
+      <div class="jobs col">
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header row font-spacing">
+      <div class="name col">
+        <div class="f-30">Team leader</div>
+        <div class="row">
+          <Image src={locationIcon} alt="location icon" />
+          <span class="f-30">Novartis, Barcelona</span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="date f-30">2021 - Presente</div>
+    </div>
+    <div class="job-desc-cont">
+      <div class="jobs col">
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+        <div class="job col">
+          <div class="font-spacing f-30">Full stack developer</div>
+          <div class="font-regular f-18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+            tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+            sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+            Sed luctus id diam at aliquet. Suspendisse blandit tortor nec porta
+            finibus. In hac habitasse platea dictumst.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <style lang="less">
-    #experiencie {
-        height: 50rem;
-        background-image: url("images/rectangle.svg");
+  #experiencie {
+    background-image: url("images/rectangle.svg");
+    .section-container {
+      padding: 2rem 0 9rem 0;
+      .header {
+        align-items: center;
+        justify-content: space-around;
+        .name {
+          width: 100%;
+          min-width: fit-content;
+          .row {
+            justify-content: start;
+            align-items: center;
+            img {
+              margin-right: 3rem;
+            }
+          }
+        }
+        .line {
+          width: 100%;
+          margin: 0rem 4rem;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            #ae2ff6 -2.08%,
+            #560dc5 50.49%,
+            #ae2ff6 100.92%
+          );
+        }
+        .date {
+          width: 100%;
+        }
+      }
+      .job-desc-cont {
+        padding-left: 9rem;
+        padding: 4rem 9rem 4rem 13rem;
+        width: 58vw;
+        .jobs {
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 2px;
+            background: linear-gradient(
+              0deg,
+              #ae2ff6 -2.08%,
+              #560dc5 50.49%,
+              #ae2ff6 100.92%
+            );
+            height: 98%;
+            position: absolute;
+            left: -44px;
+            bottom: 0;
+          }
+          .job {
+            &:not(:last-child) {
+              margin-bottom: 3rem;
+            }
+            .font-spacing {
+              position: relative;
+              margin-bottom: 1.5rem;
+              &::before {
+                content: "";
+                position: absolute;
+                background-image: url("images/EllipseSmall.svg");
+                width: 2.4rem;
+                height: 2.4rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                left: -55px;
+                top: 7px;
+              }
+            }
+          }
+        }
+      }
     }
+    @media (max-width: 850px) {
+        .section-container {
+
+        }
+    }
+    @media (max-width: 551px) {
+        .section-container {
+         .header {
+            flex-direction: column;
+            .name {
+                .row {
+                    img {
+                        width: 3rem;
+                        margin-right: .8rem;
+                    }
+                }
+            }
+            .line {
+                margin-bottom: 1rem;
+            }
+         }   
+         .job-desc-cont {
+            width: 68vw;
+            padding: 4rem 8px 4rem 9rem;
+            .jobs {
+                &::before {
+                    left: -30px;
+                }
+                .job {
+                    .font-spacing {
+                        &::before {
+                            left: -36px;
+                        }
+                    }
+                }
+            }
+         }
+        }
+    }
+  }
 </style>

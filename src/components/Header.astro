@@ -1,4 +1,7 @@
 ---
+
+import MobileHeader from "./MobileHeader.astro";
+
 /* interface Props {
 	title: string;
 	body: string;
@@ -8,7 +11,7 @@
 const { href, title, body } = Astro.props; */
 ---
 
-<div id="header">
+<div id="header" class="blur">
   <div class="section-container row font-regular">
     <div class="logo f-40">TA</div>
     <div class="navbar row">
@@ -20,6 +23,7 @@ const { href, title, body } = Astro.props; */
       <span class="navbar-item f-30">Contacto</span>
     </div>
     <div class="lang f-30">EN</div>
+    <MobileHeader client:visible/>
   </div>
 </div>
 <style lang="less">
@@ -28,8 +32,10 @@ const { href, title, body } = Astro.props; */
     width: 100%;
     height: 10rem;
     z-index: 1;
-    backdrop-filter: blur(14px);
     background-color: transparent;
+    &.blur {
+      backdrop-filter: blur(14px);
+    }
     .section-container {
       justify-content: space-between;
       height: 100%;
@@ -40,6 +46,13 @@ const { href, title, body } = Astro.props; */
           &:not(:last-child) {
             margin-right: 2.5rem;
           }
+        }
+      }
+    }
+    @media (max-width: 551px) { 
+      .section-container {
+        .navbar,.lang {
+          display: none;
         }
       }
     }
