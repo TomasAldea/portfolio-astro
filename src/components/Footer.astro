@@ -4,26 +4,39 @@ import iconLike from "../images/like.svg";
 import iconUnLike from "../images/unlike.svg";
 import iconCopyright from "../images/copyright.svg";
 import astroNormal from "../images/astro-normal.svg";
+import linkedin from "../images/linkdn.svg";
+import githubCool from "../images/coolGithub.svg";
 ---
 
 <div id="footer">
   <div class="content-container">
+    <div class="rrss col">
+      <span class="f-15 font-light">RRSS</span>
+      <div class="line"></div>
+      <Image src={linkedin} class="mb" alt="linkedin icon" />
+      <Image src={githubCool} alt="github icon" />
+    </div>
+    <div class="by">
+      <span class="f-18 font-light">diseñado</span>
+    </div>
     <div class="row bottom">
       <div class="feedback row">
-        <span class="font-light f-20">¡Envía tu feedback!</span>
+        <span class="font-light f-18">¡Envía tu feedback!</span>
+        <span class="font-light f-18 mobile">¡Feedback!</span>
         <Image src={iconLike} alt="like icon" />
         <Image src={iconUnLike} alt="unlike icon" />
-    </div>
-    <div class="line"></div>
-    
-    <div class="astro col">
+      </div>
+      <div class="line"></div>
+
+      <div class="astro col">
         <Image src={astroNormal} alt="Astro icon" />
         <span class="font-light f-10">Powered by</span>
-        <span class="font-light f-20">Astro 3.0</span>
+        <span class="font-light f-18">Astro 3.0</span>
       </div>
 
       <div class="copyright row">
-        <span class="font-light f-20">Desarrollado por Tomás Aldea</span>
+        <span class="font-light f-18">Desarrollado por Tomás Aldea</span>
+        <span class="font-light f-18 mobile">By Tomás Aldea</span>
         <Image src={iconCopyright} alt="Copyright" />
       </div>
     </div>
@@ -33,7 +46,7 @@ import astroNormal from "../images/astro-normal.svg";
 <style lang="less">
   #footer {
     width: 100%;
-    height: 53rem;
+    height: 40rem;
     overflow: hidden;
     .content-container {
       margin: 0 auto;
@@ -43,6 +56,45 @@ import astroNormal from "../images/astro-normal.svg";
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+      .rrss {
+        position: absolute;
+        left: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 6rem;
+        img {
+          height: auto;
+          cursor: pointer;
+          width: 3.5rem;
+          &.mb {
+            margin-bottom: 1rem;
+          }
+        }
+        span {
+          writing-mode: vertical-lr;
+          text-orientation: upright;
+          text-transform: uppercase;
+        }
+        .line {
+          background: linear-gradient(
+            0deg,
+            #ae2ff6 -2.08%,
+            #560dc5 50.49%,
+            #ae2ff6 100.92%
+          );
+          width: 1px;
+          height: 5rem;
+          margin: 1.2rem 0rem;
+        }
+      }
+      .by {
+        position: absolute;
+        right: 3rem;
+        bottom: 9rem;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-transform: uppercase;
+      }
       &::before {
         content: "";
         width: 100%;
@@ -71,40 +123,68 @@ import astroNormal from "../images/astro-normal.svg";
         width: 100%;
         align-items: center;
         .astro {
-            align-items: center;
+          align-items: center;
+          position: absolute;
+          align-items: center;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #281840;
+          padding: 0 2rem;
+          bottom: 4%;
+          &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 3rem solid transparent;
+            border-right: 3rem solid transparent;
+            border-bottom: 4rem solid #281840;
+            display: inline-block;
             position: absolute;
-            align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #281840;
-            padding: 0 2rem;
-            bottom: 3%;
-            img {
-                margin-bottom: 1.5rem;
-            }
+            bottom: 110%;
+            z-index: -1;
+          }
+          img {
+            margin-bottom: 1.5rem;
+            height: auto;
+          }
         }
         .line {
-            height: 1px;
-            width: 100%;
-            background-color: red;
+          height: 1px;
+          width: 100%;
+          background: linear-gradient(
+            90deg,
+            #ae2ff6 -2.08%,
+            #560dc5 50.49%,
+            #ae2ff6 100.92%
+          );
         }
         .feedback {
-            justify-content: space-between;
-            width: fit-content;
-            padding-right: 4rem;
+          justify-content: space-between;
+          width: fit-content;
+          padding-right: 4rem;
+          .mobile {
+            display: none;
+          }
+          img {
+            height: auto;
+          }
         }
         .copyright {
-            padding-left: 4rem;
+          padding-left: 4rem;
+          .mobile {
+            display: none;
+          }
         }
         .row {
-            min-width: max-content;
-            align-items: center;
+          min-width: max-content;
+          align-items: center;
           span {
             margin-right: 2rem;
             text-transform: uppercase;
           }
           img {
+            cursor: pointer;
             width: 4.4rem;
             &:not(:last-child) {
               margin-right: 1rem;
@@ -112,6 +192,103 @@ import astroNormal from "../images/astro-normal.svg";
           }
         }
       }
+    }
+
+    @media (max-width: 1190px) {
+      .content-container {
+        .rrss {
+          img {
+            width: 2rem;
+            &:first-child {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+        .bottom {
+          .feedback {
+            padding-right: 2rem;
+            span {
+              font-size: 1.4rem;
+            }
+            img {
+                width: 2.8rem; 
+            }
+          }
+          .copyright {
+            padding-left: 2rem;
+            span {
+              font-size: 1.4rem;
+              margin-right: 1rem;
+            }
+            img {
+              height: auto;
+              width: 3rem;
+            }
+          }
+        }
+        .by {
+            right: 2.6rem;
+          bottom: 8rem;
+          span {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 850px) { 
+        .content-container { 
+            .bottom {
+                .astro {
+                    img {
+                        width: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 532px) {
+        height: 28rem;
+ 
+        .content-container { 
+            .rrss {
+                .line {
+                    display: none;
+                }
+                span {
+                    margin-bottom: 1rem;
+                }
+            }
+            .by {
+                bottom: 6rem;
+                span {
+                    letter-spacing: 1px;
+                }
+            }
+            .bottom {
+                .feedback {
+                    span {
+                        display: none;
+                        &.mobile {
+                          display: block;
+                        }
+                    }
+                }
+                .astro {
+                    img {
+                        width: 3rem;
+                    }
+                }
+                .copyright {
+                    span {
+                        display: none;
+                        &.mobile {
+                          display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
   }
 </style>
