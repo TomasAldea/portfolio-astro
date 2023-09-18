@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import iconLike from "../images/like.svg";
+import iconUnLike from "../images/unlike.svg";
+import iconCopyright from "../images/copyright.svg";
+import astroNormal from "../images/astro-normal.svg";
+---
+
+<div id="footer">
+  <div class="content-container">
+    <div class="row bottom">
+      <div class="feedback row">
+        <span class="font-light f-20">¡Envía tu feedback!</span>
+        <Image src={iconLike} alt="like icon" />
+        <Image src={iconUnLike} alt="unlike icon" />
+    </div>
+    <div class="line"></div>
+    
+    <div class="astro col">
+        <Image src={astroNormal} alt="Astro icon" />
+        <span class="font-light f-10">Powered by</span>
+        <span class="font-light f-20">Astro 3.0</span>
+      </div>
+
+      <div class="copyright row">
+        <span class="font-light f-20">Desarrollado por Tomás Aldea</span>
+        <Image src={iconCopyright} alt="Copyright" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="less">
+  #footer {
+    width: 100%;
+    height: 53rem;
+    overflow: hidden;
+    .content-container {
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      &::before {
+        content: "";
+        width: 100%;
+        background-color: #281840;
+        height: 100rem;
+        position: absolute;
+        bottom: -75rem;
+        left: -40rem;
+        transform: rotate(-160deg);
+        z-index: -1;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        background-color: #281840;
+        height: 100rem;
+        position: absolute;
+        bottom: -75rem;
+        right: -40rem;
+        transform: rotate(160deg);
+        z-index: -1;
+      }
+      .bottom {
+        justify-content: space-between;
+        padding: 0 2rem 2rem 2rem;
+        width: 100%;
+        align-items: center;
+        .astro {
+            align-items: center;
+            position: absolute;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #281840;
+            padding: 0 2rem;
+            bottom: 3%;
+            img {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .line {
+            height: 1px;
+            width: 100%;
+            background-color: red;
+        }
+        .feedback {
+            justify-content: space-between;
+            width: fit-content;
+            padding-right: 4rem;
+        }
+        .copyright {
+            padding-left: 4rem;
+        }
+        .row {
+            min-width: max-content;
+            align-items: center;
+          span {
+            margin-right: 2rem;
+            text-transform: uppercase;
+          }
+          img {
+            width: 4.4rem;
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
