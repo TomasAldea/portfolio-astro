@@ -40,7 +40,6 @@
     const handleScroll = () => {
       const menuBubble = document.getElementById("menu-bg");
       const isMenuBubbleChanged = menuBubble.classList.contains("change-bg");
-      console.log(isMenuBubbleChanged);
       const shouldBlur = window.scrollY > 0 && !isMenuBubbleChanged;
 
       header.classList.toggle("blur", shouldBlur);

@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proyect detail">
+    <div id="proyect-detail">
+        <div class="container row">
+            <h1>
+                Commodo minim nostrud nisi velit sint. Nulla cupidatat id voluptate consectetur ad esse. Voluptate ullamco Lorem dolor esse ex consequat mollit dolore reprehenderit amet tempor. Esse fugiat duis qui reprehenderit Lorem in labore. Ut anim enim et laboris consectetur minim exercitation cillum eiusmod labore occaecat enim laborum. In non aute labore minim aliquip magna laborum sunt incididunt qui. Eiusmod in excepteur officia incididunt reprehenderit.
+            </h1>
+            <div class="videocontainer">
+
+                <video controls="" autoplay="" loop
+                style="view-transition-name: video-persist;"
+                transition:name="hero" 
+                transition:persist
+                >
+                <source
+                src="http://localhost:4321/portfolio-astro/dummy.mp4"
+                type="video/mp4"
+                />
+                </video>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style lang="less">
+    #proyect-detail {
+        height: 100vh;
+        .container {
+            .videocontainer {
+                position: relative;
+                width: 50%;
+                height: 80vh;
+                video {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+            h1 {
+                width: 50%;
+                color: white;
+                font-size: 5rem;
+            }
+        }
+    }
+</style>
