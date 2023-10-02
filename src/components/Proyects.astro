@@ -1,5 +1,6 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
+import proyectVideo from "../videos/dummy.mp4";
 ---
 
 <div id="proyects" class="section-container">
@@ -16,7 +17,7 @@ import SectionTitle from "./SectionTitle.astro";
         transition:persist
         >
           <source
-            src="http://localhost:4321/portfolio-astro/dummy.mp4"
+            src={proyectVideo}
             type="video/mp4"
           />
         </video>

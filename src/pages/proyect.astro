@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import proyectVideo from "../videos/dummy.mp4";
 ---
 
 <Layout title="Proyect detail">
@@ -16,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
                 transition:persist
                 >
                 <source
-                src="http://localhost:4321/portfolio-astro/dummy.mp4"
+                src={proyectVideo}
                 type="video/mp4"
                 />
                 </video>
