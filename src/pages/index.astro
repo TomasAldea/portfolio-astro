@@ -5,6 +5,12 @@ import Experiencie from "../components/Experiencie.astro";
 import Skills from "../components/Skills.astro";
 import Proyects from "../components/Proyects.astro";
 import Form from "../components/Form.astro";
+
+import { sanityClient } from "sanity:client";
+const posts = await sanityClient.fetch(`*[_type == "event"] | order(publishedAt desc)`);
+
+console.log("posts - " , posts);
+
 ---
 
 <Layout title="Welcome to Astro.">
