@@ -1,28 +1,120 @@
 ---
 import proyectVideo from "../videos/dummy.mp4";
+import SectionTitle from "./SectionTitle.astro";
+import locationIcon from "../images/location-icon.svg";
+import { Image } from "astro:assets";
 ---
 
 <section id="proyect-detail">
   <div class="section-container row">
-    <h1>
-      Commodo minim nostrud nisi velit sint. Nulla cupidatat id voluptate
-      consectetur ad esse. Voluptate ullamco Lorem dolor esse ex consequat
-      mollit dolore reprehenderit amet tempor. Esse fugiat duis qui
-      reprehenderit Lorem in labore. Ut anim enim et laboris consectetur minim
-      exercitation cillum eiusmod labore occaecat enim laborum. In non aute
-      labore minim aliquip magna laborum sunt incididunt qui. Eiusmod in
-      excepteur officia incididunt reprehenderit.
-    </h1>
+    <div class="description">
+      <div class="header row font-spacing">
+        <div class="name col">
+          <div class="f-20">Desafios</div>
+        </div>
+      </div>
+      <div class="job-desc-cont">
+        <div class="jobs col">
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header row font-spacing mt-2">
+        <div class="name col">
+          <div class="f-20">Hitos</div>
+        </div>
+      </div>
+      <div class="job-desc-cont">
+        <div class="jobs col">
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+          <div class="job col">
+            <div class="font-spacing f-18">Full stack developer</div>
+            <div class="font-regular f-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              sagittis sapien massa, vitae commodo odio varius id. Nunc tempor
+              tempus enim eget euismod. Nullam sollicitudin posuere lectus eget
+              sodales. Vivamus quis augue eleifend, auctor mi eu, feugiat purus.
+              Sed luctus id diam at aliquet. Suspendisse blandit tortor nec
+              porta finibus. In hac habitasse platea dictumst.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="videocontainer">
       <video
-        controls=""
+      class="border-gradient"
         autoplay=""
         loop
+        muted
         style="view-transition-name: video-persist;"
         transition:name="hero"
-        transition:persist
       >
-        <source src={proyectVideo} type="video/mp4" />
+        <source src='https://www.exit109.com/~dnn/clips/RW20seconds_1.mp4' type="video/mp4" />
       </video>
     </div>
   </div>
@@ -30,22 +122,95 @@ import proyectVideo from "../videos/dummy.mp4";
 <style lang="less">
   #proyect-detail {
     height: calc(100vh - 10rem);
-    margin-top: 10rem;
+    margin-top: 20rem;
+    margin-bottom: 8rem;
     .section-container {
+      justify-content: space-between;
+      .description {
+        width: 50%;
+        .header {
+          margin-bottom: 1rem;
+          align-items: center;
+          justify-content: space-around;
+          .name {
+            width: 100%;
+            min-width: fit-content;
+            .row {
+              justify-content: start;
+              align-items: center;
+            }
+          }
+
+        }
+        .job-desc-cont {
+          padding-left: 5rem;
+          .jobs {
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 2px;
+              background: linear-gradient(
+                0deg,
+                #ae2ff6 -2.08%,
+                #560dc5 50.49%,
+                #ae2ff6 100.92%
+              );
+              height: 98%;
+              position: absolute;
+              left: -44px;
+              bottom: 0;
+            }
+            .job {
+              &:not(:last-child) {
+                margin-bottom: 2rem;
+              }
+              .font-spacing {
+                position: relative;
+                margin-bottom: 1.5rem;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  background-image: url("../images/ellipseSmall.svg");
+                  width: 2.4rem;
+                  height: 2.4rem;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  left: -55px;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
       .videocontainer {
         position: relative;
         width: 50%;
         height: 80vh;
         video {
-          width: 100%;
+          background: transparent;
+          right: 0;
+          width: auto;
           height: 100%;
           position: absolute;
+          padding: 2rem;
+
         }
       }
-      h1 {
-        width: 50%;
-        color: white;
-        font-size: 2rem;
+    }
+    @media (max-width: 551px) {
+      .section-container {
+        flex-direction:column-reverse;
+        height: 100%;
+        .description {
+          width: 100%;
+        }
+        .videocontainer{
+          width: 100%;
+          margin-bottom: 8rem;
+        }
       }
     }
   }

@@ -213,6 +213,15 @@ const { title } = Astro.props;
   .m-l {
     margin-left: 1rem;
   }
+  .mt-2 {
+    margin-top: 2rem;
+  }
+  .mt-4 {
+    margin-top: 4rem;
+  }
+  .mt-6 {
+    margin-top: 6rem;
+  }
   /* End Utility */
 
   /* Functions */
@@ -231,6 +240,18 @@ const { title } = Astro.props;
 
   .purple {
     background-color: @purple;
+  }
+
+  .border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to left, rgba(226, 59, 59, 0.48) 0%, rgba(173, 47, 246, 0.492) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(226, 59, 59, 0.23) 0%,
+      rgba(174, 47, 246, 0.23) 100%
+    );
   }
 
   @gradient1: linear-gradient(87deg, #6668eb 4.11%, #e23b3b 95.91%);
