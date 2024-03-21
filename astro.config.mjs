@@ -2,7 +2,6 @@ import { defineConfig, passthroughImageService } from "astro/config";
 import sanityIntegration from "@sanity/astro";
 import react from "@astrojs/react";
 
-//https://www.sanity.io/plugins/sanity-astro
 // https://astro.build/config
 export default defineConfig({
   site: "https://tomasaldea.github.io",
